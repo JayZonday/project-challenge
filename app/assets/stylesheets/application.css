@@ -19,3 +19,14 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+article{
+  display: inline-grid;
+  height: 250px;
+  width: 250px;
+}
+
+img{
+  height: 250px;
+  width: 250px;
+}
