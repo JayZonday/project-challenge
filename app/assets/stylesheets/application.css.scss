@@ -15,25 +15,83 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
+body{
+    background-image: url('https://png.pngtree.com/element_origin_min_pic/17/08/22/c34462ec3696fd33ac6f298a0542f245.jpg');
+}
+
+#hp-title{
+  border: 2px solid black;
+  background: rgba(0,0,0,.8);
+  margin: 2px auto;
+  padding: 10px;
+  border-radius: 1pc;
+  color: white;
+}
+
+/*Dog Names on HP*/
+.dog-name{
+  border: 2px solid black;
+  width: auto;
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  color: white;
+  border-radius: 1pc;
+}
+
+
 
 /*Collection of Dog images on main page (Grid)*/
 article{
   display: inline-grid;
+  margin: 2px auto;
+  padding: 20px;
+  background: rgba(0,0,0,.7);
+  border-radius: 1pc;
+}
+
+section{
+  margin: 2px auto;
+  padding: 20px;
+  background: rgba(0,0,0,.7);
+  border-radius: 1pc;
 }
 
 /*Good Sizing for all Dog Images*/
 img{
-  height: 450px;
-  width: 450px;
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  margin: 5px auto;
+  box-shadow: 0px 10px 60px;
+  border-radius: 2pc;
+}
 
 /*Styling for individual Dog Profile Page*/
-}
 #dog-profile{
   display:inline-grid;
+}
+
+
+.dog-prof-name{
+  border: 2px solid black;
+  width: auto;
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  color: white;
+  border-radius: 1pc;
+}
+
+.dog-prof-desc{
+  border: 2px solid black;
+  border-radius: 1pc;
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,.8);
 }

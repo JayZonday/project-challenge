@@ -1,11 +1,12 @@
-<section>
-  <h2><%= @dog.name %></h2>
+
+<section id="dog-prof">
+  <h2 class="dog-prof-name"><%= @dog.name %></h2>
 
   <% @dog.images.each do |image| %>
-    <%= image_tag url_for(image), alt: "Photo of #{@dog.name}", id:'dog-profile' %>
+    <%= image_tag url_for(image),class: 'dog-profile-page', alt: "Photo of #{@dog.name}", id:'dog-profile' %>
   <% end %>
 
-  <p><%= @dog.description %></p>
+  <p class='dog-prof-desc'><%= @dog.description %></p>
 
   <%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
   <br>
