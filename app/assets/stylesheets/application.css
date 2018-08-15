@@ -20,13 +20,19 @@ header {
   justify-content: space-between;
 }
 
+
+/*Collection of Dog images on main page (Grid)*/
 article{
   display: inline-grid;
-  height: 250px;
-  width: 250px;
 }
 
+/*Good Sizing for all Dog Images*/
 img{
-  height: 250px;
-  width: 250px;
+  height: 450px;
+  width: 450px;
+
+/*Styling for individual Dog Profile Page*/
+}
+#dog-profile{
+  display:inline-grid;
 }
