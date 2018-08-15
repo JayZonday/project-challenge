@@ -24,6 +24,7 @@ header {
 
 body{
     background-image: url('https://png.pngtree.com/element_origin_min_pic/17/08/22/c34462ec3696fd33ac6f298a0542f245.jpg');
+    color: white;
 }
 
 #hp-title{
@@ -67,9 +68,9 @@ section{
 img{
   height: 400px;
   width: 400px;
-  border: 2px solid black;
+  border: 5px solid black;
   margin: 5px auto;
-  box-shadow: 0px 10px 60px;
+  box-shadow: 0px 10px 60px orange;
   border-radius: 2pc;
 }
 
@@ -78,6 +79,12 @@ img{
   display:inline-grid;
 }
 
+
+/*Link Styling*/
+.actions{
+  border: 2px solid black;
+  background: rgba(0,0,0,0.8);
+}
 
 .dog-prof-name{
   border: 2px solid black;
