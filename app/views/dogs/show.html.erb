@@ -15,7 +15,7 @@
                   </ol>
                   <div class="carousel-inner">
                     <% @dog.images.each_with_index do | image , index | %>
-                      <div class="carousel-item <%= index === 0 ? "active": ""%>" >
+                      <div class="carousel-item center <%= index === 0 ? "active": ""%>" >
                         <%= image_tag url_for(image) %>
                       </div>
                     <% end %>

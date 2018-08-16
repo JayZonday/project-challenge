@@ -12,8 +12,6 @@
  *
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
 
 
 header {
@@ -101,4 +99,8 @@ img{
   color: white;
   text-align: center;
   background: rgba(0,0,0,.8);
+}
+
+.center  {
+  margin: 0 0 0 35%;
 }
