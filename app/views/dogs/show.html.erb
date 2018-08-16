@@ -1,41 +1,43 @@
 
-<!-- Carousel Code --->
+<!-- Bootstrap Carousel Code to create image slideshow --->
 
 <section id="dog-prof">
+
   <h2 class="dog-prof-name"><%= @dog.name %></h2>
 
   <div class="row">
     <div class="col-md-12">
         <% if @dog.images %>
-                <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <% @dog.images.each_with_index do | image , index | %>
-                    <li data-target="#carouselIndicators" data-slide-to= "<%= index %>" class="active"></li>
-                    <% end %>
-                  </ol>
-                  <div class="carousel-inner">
-                    <% @dog.images.each_with_index do | image , index | %>
-                      <div class="carousel-item center <%= index === 0 ? "active": ""%>" >
-                        <%= image_tag url_for(image) %>
-                      </div>
-                    <% end %>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                <%end%>
-              </div>
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+          <% @dog.images.each_with_index do | image , index | %>
+            <li data-target="#carouselIndicators" data-slide-to= "<%= index %>" class="active"></li>
+          <% end %>
+          </ol>
+          <div class="carousel-inner">
+          <% @dog.images.each_with_index do | image , index | %>
+            <div class="carousel-item dog-carousel-item <%= index === 0 ? "active": ""%>" >
+              <img src=<%=url_for(image)%> class = 'img-fluid mx-auto d-block'>
             </div>
+          <% end %>
+          </div>
+          <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <%end%>
+      </div>
+    </div>
 
   <p class='dog-prof-desc'><%= @dog.description %></p>
 
   <%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
   <br>
   <%= link_to "Delete #{@dog.name}'s Profile", dog_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 </section>
