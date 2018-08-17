@@ -22,9 +22,11 @@
             <%= link_to 'Add your dog', new_dog_path %>
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
           <% else %>
+          <div class="signin">
             <%= link_to 'Sign in', new_user_session_path %>
             <%= link_to 'Sign up', new_user_registration_path %>
           <% end %>
+        </div>
         </div>
       </header>
       <div id="main">
